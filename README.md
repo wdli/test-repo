@@ -1,6 +1,6 @@
 # GIT Tips
 
-* Revert a current file to a previous commit
+##Revert a current file to a previous commit
 
 First find out about this history of the file, e.g.
 
@@ -36,7 +36,7 @@ Date:   Sun Sep 8 08:28:11 2013 -0700
     Add a C program to github to test
 
 ```
-Then use **git checkout ** to checkout the commit id
+Then use **git checkout** to checkout the commit id
 
 ```
 git checkout 467e8a713945 <file name> 
