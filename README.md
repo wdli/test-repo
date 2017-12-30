@@ -1,6 +1,6 @@
 # GIT Tips
 
-##Revert a current file to a previous commit
+## Revert a current file to a previous commit
 
 First find out about this history of the file, e.g.
 
