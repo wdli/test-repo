@@ -1,7 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-netshoot
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: netshoot-deployment
+  namespace: test-netshoot
 spec:
   replicas: 1
   selector:
