@@ -1,12 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: deny-all
+  name: allow-netshoot
   namespace: test-nginx-server
 spec:
   podSelector: {}
   policyTypes:
   - Ingress
   - Egress
-  ingress: []
-  egress: []
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: netshoot
