@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: test-ngnix-server
+  name: test-nginx-server
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-server
-  namespace: test-ngnix-server
+  namespace: test-nginx-server
   labels:
     app: nginx-server
 spec:
@@ -30,7 +30,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-server
-  namespace: test-ngnix-server
+  namespace: test-nginx-server
 spec:
   selector:
     app: nginx-server
