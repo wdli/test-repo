@@ -8,6 +8,7 @@ kind: Deployment
 metadata:
   name: nginx-server
   namespace: test-ngnix-server
+  app: nginx-server
 spec:
   replicas: 1
   selector:
