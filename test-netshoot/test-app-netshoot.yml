@@ -8,7 +8,8 @@ kind: Deployment
 metadata:
   name: netshoot-deployment
   namespace: test-netshoot
-  app: netshoot
+  labels:
+    app: netshoot
 spec:
   replicas: 1
   selector:
