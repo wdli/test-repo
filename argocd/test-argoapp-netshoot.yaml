@@ -1,0 +1,18 @@
+apiVersion: v1
+items:
+- apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metadata:
+    name: test-netshoot
+    namespace: argocd
+  spec:
+    destination:
+      server: https://kubernetes.default.svc
+    project: default
+    source:
+      path: ./test-netshoot
+      repoURL: https://github.com/wdli/test-repo.git
+      targetRevision: test-repo-b-1
+kind: List
+metadata:
+  resourceVersion: ""
