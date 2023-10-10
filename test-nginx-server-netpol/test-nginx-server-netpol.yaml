@@ -1,15 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-netshoot
+  name: allow-whitelist
   namespace: test-nginx-server
 spec:
   podSelector: {}
   policyTypes:
-  - Ingress
   - Egress
-  ingress:
-  - from:
-    - podSelector:
+  ingress: []
+  egress:
+  - to:
+    - namespaceSelector:
         matchLabels:
-          app: netshoot
+          name: kube-system
