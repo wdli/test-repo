@@ -4,12 +4,13 @@ metadata:
   name: allow-whitelist
   namespace: test-nginx-server
 spec:
-  podSelector: {}
+  podSelector:
+    matchLabels:
+      app: nginx-server
   policyTypes:
   - Egress
   - Ingress
-  ingress:
-  - {}
+  ingress: []
   egress:
   - to:
     - namespaceSelector:
