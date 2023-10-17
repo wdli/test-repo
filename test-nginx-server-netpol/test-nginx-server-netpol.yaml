@@ -12,6 +12,9 @@ spec:
   - Ingress
   ingress: 
   - from:
+    - namespaceSelector:
+        matchLabels:
+          name: test-netshoot
     - podSelector:
         matchLabels:
           app: netshoot
