@@ -10,7 +10,11 @@ spec:
   policyTypes:
   - Egress
   - Ingress
-  ingress: []
+  ingress: 
+  - from:
+    - podSelector:
+        matchLabels:
+          app: netshoot
   egress:
   - to:
     - namespaceSelector:
