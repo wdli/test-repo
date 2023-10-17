@@ -23,3 +23,6 @@ spec:
     - namespaceSelector:
         matchLabels:
           name: kube-system
+    - namespaceSelector:
+        matchLabels:
+          name: test-netshoot
