@@ -18,6 +18,9 @@ spec:
     - podSelector:
         matchLabels:
           app: netshoot
+    ports:
+    - port: 80
+      protocol: TCP
   egress:
   - to:
     - namespaceSelector:
